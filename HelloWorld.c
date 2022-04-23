@@ -10,5 +10,5 @@ int main()
 
     printf("0.1 을 100번 더한 결과 : %f \n", num);
 
-    return 1;
+    return 0;
 }
