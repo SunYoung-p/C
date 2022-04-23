@@ -2,14 +2,13 @@
 
 int main()
 {
-    int result;
-    int num1, num2, num3;
+    int i = 0;
+    float num = 0.0;
 
-    printf("세 개의 정수 입력 : ");
-    scanf("%d %d %d", &num1, &num2, &num3);
+    for (i = 0; i < 100; i++)
+        num += 0.1;
 
-    result = num1 + num2 + num3;
-    printf("%d + %d + %d = %d", num1, num2, num3, result);
+    printf("0.1 을 100번 더한 결과 : %f \n", num);
 
-    return 0;
+    return 1;
 }
