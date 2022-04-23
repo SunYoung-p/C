@@ -2,13 +2,14 @@
 
 int main()
 {
-    int a = 10;
-    int i = 0;
+    int result;
+    int num1, num2, num3;
 
-    for (i = 0; i < 10; i++)
-    {
-        printf("i value : %d \n", i);
-    }
-    printf("Hello World !");
+    printf("세 개의 정수 입력 : ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    result = num1 + num2 + num3;
+    printf("%d + %d + %d = %d", num1, num2, num3, result);
+
     return 0;
 }
