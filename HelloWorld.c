@@ -2,13 +2,11 @@
 
 int main()
 {
-    int i = 0;
-    float num = 0.0;
-
-    for (i = 0; i < 100; i++)
-        num += 0.1;
-
-    printf("0.1 을 100번 더한 결과 : %f \n", num);
-
+    int i = 1;
+    long j = 1;
+    short n1 = 5, n2 = 10;
+    printf("int형의 size : %d \n", sizeof(i));
+    printf("long형의 size : %d \n", sizeof(j));
+    printf("short형 자료형 두 개의 연산 결과의 size는 ? %d \n", sizeof(n1 + n2)); // 4 출력
     return 0;
 }
