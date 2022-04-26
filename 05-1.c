@@ -7,6 +7,7 @@ void no5();
 
 int main()
 {
+    no5();
 
     return 0;
 }
