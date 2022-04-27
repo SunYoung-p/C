@@ -5,7 +5,7 @@ void no3();
 
 int main()
 {
-    no3();
+    no1();
 
     return 0;
 }
@@ -25,6 +25,7 @@ void no1()
 
     printf("정수 입력 (0 to quit): ");
     scanf("%d", &num);
+    total += num;
 
     while (num != 0)
     {
