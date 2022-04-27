@@ -1,20 +1,9 @@
 #include <stdio.h>
 
-int TwoZin(int a);
-
 int main()
 {
-    int a = 42;
-
-    TwoZin(a);
+    for (int i = 0; i < 10; i++)
+        printf("Hello World ! \n");
 
     return 0;
-}
-
-int TwoZin(int a)
-{
-    if (a / 2)
-        TwoZin(a / 2);
-
-    printf("%d", (char)(a % 2));
 }
