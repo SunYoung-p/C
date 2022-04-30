@@ -1,3 +1,5 @@
+
+// We need Math.  Because I can make below code due to calcualtion ax+y = b  ax2+y2 = c  (multi x/y)
 #include <stdio.h>
 
 int main()
