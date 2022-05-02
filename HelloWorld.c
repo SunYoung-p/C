@@ -1,35 +1,15 @@
 #include <stdio.h>
 
+int Factorial(int n)
+{
+    if (n == 0)
+        return 1;
+    else
+        return n * Factorial(n - 1);
+}
 int main()
 {
-    int n = 5;
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n - i - 1; j++)
-            printf("o ");
-
-        for (int j = 0; j < 2 * i + 1; j++)
-            printf("@ ");
-
-        for (int j = 0; j < n - i - 1; j++)
-            printf("o ");
-
-        puts("");
-    }
-
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < i + 1; j++)
-            printf("o ");
-
-        for (int j = 0; j < (i * -2) + 7; j++)
-            printf("@ ");
-
-        for (int j = 0; j < i + 1; j++)
-            printf("o ");
-
-        puts("");
-    }
+    printf("4! = %d \n", Factorial(4));
 
     return 0;
 }
