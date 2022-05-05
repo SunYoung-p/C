@@ -1,15 +1,14 @@
 #include <stdio.h>
 
-int Factorial(int n)
-{
-    if (n == 0)
-        return 1;
-    else
-        return n * Factorial(n - 1);
-}
 int main()
 {
-    printf("4! = %d \n", Factorial(4));
+    for (int i = 1; i <= 9; i++)
+    {
+        for (int j = 1; j <= 9; j++)
+            printf("%d << %d = %d \n", i, j, i << j);
+
+        puts("");
+    }
 
     return 0;
 }
