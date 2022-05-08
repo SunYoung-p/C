@@ -1,14 +1,20 @@
 #include <stdio.h>
 
+int GetFact(int n)
+{
+    if (n == 1)
+        return 1;
+    return n * GetFact(n - 1);
+}
+
 int main()
 {
-    for (int i = 1; i <= 9; i++)
-    {
-        for (int j = 1; j <= 9; j++)
-            printf("%d << %d = %d \n", i, j, i << j);
+    int n = 0;
 
-        puts("");
-    }
+    printf("팩토리얼을 구할 수 입력 : ");
+    scanf("%d", &n);
+
+    printf("%d 의 팩토리얼 결과값 : %d \n", n, GetFact(n));
 
     return 0;
 }
