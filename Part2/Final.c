@@ -5,9 +5,20 @@ void No1_PrintEven(int n[], int len);
 void No1();
 void No2_Print2Zin(int);
 void No2();
-
+void No3();
+int No4_GetStrLen(char *);
+int No4_IsPalind(char *, int);
 int main()
 {
+    char str[100] = {0};
+    int len = 0;
+
+    printf("문자열 입력: ");
+    scanf("%s", str);
+
+    len = No4_GetStrLen(str);
+    printf("문자열의 길이는 %d 입니다 \n", len);
+    printf("이 문자열은 %s  \n", No4_IsPalind(str, len) ? "회문입니다" : "회문이 아닙니다");
 
     return 0;
 }
@@ -67,4 +78,52 @@ void No2()
     scanf("%d", &n);
 
     No2_Print2Zin(n);
+}
+
+void No3()
+{
+    int n[10] = {0};
+    int m = 0;
+
+    puts("총 10개의 숫자 입력");
+    for (int i = 0, j = 0, k = 1; i < 10; i++)
+    {
+        printf("입력 : ");
+        scanf("%d", &m);
+
+        if (m % 2)
+            n[j++] = m;
+        else
+            n[10 - k++] = m;
+    }
+
+    printf("배열 요소의 출력 : ");
+    for (int i = 0; i < 10; i++)
+        printf("%d ", n[i]);
+}
+
+int No4_GetStrLen(char *str)
+{
+    int cnt = 0;
+
+    while (1)
+    {
+        if (str[cnt] == 0)
+            break;
+
+        cnt++;
+    }
+
+    return cnt;
+}
+
+int No4_IsPalind(char *str, int len)
+{
+    for (int i = 0; i < len / 2; i++)
+    {
+        if (str[i] != str[len - 1 - i])
+            return 0;
+    }
+
+    return 1;
 }
