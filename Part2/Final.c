@@ -8,17 +8,24 @@ void No2();
 void No3();
 int No4_GetStrLen(char *);
 int No4_IsPalind(char *, int);
+void No4();
+void No5_DesSort(int *, int);
+
 int main()
 {
-    char str[100] = {0};
-    int len = 0;
+    int n[7] = {0};
+    int len = sizeof(n) / sizeof(int);
+    for (int i = 0; i < len; i++)
+    {
+        printf("입력 : ");
+        scanf("%d", &n[i]);
+    }
 
-    printf("문자열 입력: ");
-    scanf("%s", str);
-
-    len = No4_GetStrLen(str);
-    printf("문자열의 길이는 %d 입니다 \n", len);
-    printf("이 문자열은 %s  \n", No4_IsPalind(str, len) ? "회문입니다" : "회문이 아닙니다");
+    No5_DesSort(n, len);
+    for (int i = 0; i < len; i++)
+    {
+        printf("%d ", n[i]);
+    }
 
     return 0;
 }
@@ -126,4 +133,34 @@ int No4_IsPalind(char *str, int len)
     }
 
     return 1;
+}
+
+void No4()
+{
+    char str[100] = {0};
+    int len = 0;
+
+    printf("문자열 입력: ");
+    scanf("%s", str);
+
+    len = No4_GetStrLen(str);
+    printf("문자열의 길이는 %d 입니다 \n", len);
+    printf("이 문자열은 %s  \n", No4_IsPalind(str, len) ? "회문입니다" : "회문이 아닙니다");
+}
+
+void No5_DesSort(int *n, int len)
+{
+    int temp = 0;
+    for (int i = 0; i < len - 1; i++)
+    {
+        for (int j = 0; j < len - 1 - i; j++)
+        {
+            if (n[j] < n[j + 1])
+            {
+                temp = n[j];
+                n[j] = n[j + 1];
+                n[j + 1] = temp;
+            }
+        }
+    }
 }
