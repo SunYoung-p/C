@@ -34,7 +34,7 @@ int main()
         s3 += n[4][i];
 
     n[4][4] = s3;
-    
+
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)

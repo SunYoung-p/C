@@ -1,20 +1,17 @@
 #include <stdio.h>
 
-int GetFact(int n)
-{
-    if (n == 1)
-        return 1;
-    return n * GetFact(n - 1);
-}
-
+void ShowAllStr(int, char [][20]);
 int main()
 {
-    int n = 0;
+    char n[3][20] = {"Hello", "My", "Name is park"};
 
-    printf("팩토리얼을 구할 수 입력 : ");
-    scanf("%d", &n);
-
-    printf("%d 의 팩토리얼 결과값 : %d \n", n, GetFact(n));
+    ShowAllStr(3, n);
 
     return 0;
+}
+
+void ShowAllStr(int len, char n[][20])
+{
+    for (int i = 0; i < len; i++)
+        printf("%s \n", n[i]);
 }
