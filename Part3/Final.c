@@ -11,6 +11,38 @@ void No5();
 
 int main()
 {
+    int n[3] = {0}, m[3] = {0};
+    int st = 0, ball = 0, cnt = 1;
+
+    srand((int)time(NULL));
+    for (int i = 0; i < 3; i++)
+        n[i] = rand() % 10;
+
+    puts("Start Game!");
+
+    while (1)
+    {
+        printf("3개의 숫자 선택 : ");
+        scanf("%d %d %d", &m[0], &m[1], &m[2]);
+
+        for (int i = 0; i < 3; i++)
+            if (n[i] == m[i])
+                st++;
+
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+                if (n[i] == m[j] && i != j)
+                    ball++;
+
+        printf("%d번째 도전 결과 : %dstrike, %dball!!\n", cnt++, st, ball);
+
+        if (st == 3)
+            break;
+        else
+            st = ball = 0;
+    }
+
+    puts("\nGame Over!");
 
     return 0;
 }
