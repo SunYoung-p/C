@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-void ShowAllStr(int, char [][20]);
 int main()
 {
-    char n[3][20] = {"Hello", "My", "Name is park"};
+    char n[7] = {0}, m[6] = {0};
 
-    ShowAllStr(3, n);
+    fputs("주민번호 앞 6자리 입력 : ", stdout);
+    fgets(n, sizeof(n), stdin);
 
+    fflush(stdin);
+
+    fputs("이름 입력 : ", stdout);
+    fgets(m, sizeof(m), stdin);
+
+    printf("주민번호 : %s\n이름 : %s \n", n, m);
     return 0;
-}
-
-void ShowAllStr(int len, char n[][20])
-{
-    for (int i = 0; i < len; i++)
-        printf("%s \n", n[i]);
 }
