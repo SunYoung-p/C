@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-struct employee
+typedef struct employee
 {
     char name[20];
     char number[20];
     int pay;
-};
+} Employee;
 
-struct employee init();
+Employee init();
 
 int main()
 {
-    struct employee n[3];
+    Employee n[3];
 
     for (int i = 0; i < 3; i++)
     {
@@ -30,9 +30,9 @@ int main()
     }
 }
 
-struct employee init()
+Employee init()
 {
-    struct employee n;
+    Employee n;
 
     printf("이름을 입력하세요 : ");
     scanf("%s", n.name);
