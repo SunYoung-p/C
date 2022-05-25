@@ -27,12 +27,9 @@ void SwapPoint(Point *n, Point *m)
 {
     Point swap;
 
-    swap.xpos = n->xpos;
-    swap.ypos = n->ypos;
-    n->xpos = m->xpos;
-    n->ypos = m->ypos;
-    m->xpos = swap.xpos;
-    m->ypos = swap.ypos;
+    swap = *n;
+    *n = *m;
+    *m = swap;
 
     return;
 }

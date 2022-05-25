@@ -1,17 +1,26 @@
 #include <stdio.h>
 
+enum
+{
+    R,
+    G,
+    B
+};
+typedef enum dosol
+{
+    Do = 1,
+    Re = 2,
+    Mi = 3
+} Dosol;
+
 int main()
 {
-    char n[7] = {0}, m[6] = {0};
+    Dosol n;
 
-    fputs("주민번호 앞 6자리 입력 : ", stdout);
-    fgets(n, sizeof(n), stdin);
+    for (n = Do; n <= Mi; n++)
+        printf("%d\n", n);
 
-    fflush(stdin);
-
-    fputs("이름 입력 : ", stdout);
-    fgets(m, sizeof(m), stdin);
-
-    printf("주민번호 : %s\n이름 : %s \n", n, m);
-    return 0;
+    printf("R : %d \n", R);
+    printf("G : %d \n", G);
+    printf("B : %d \n", B);
 }
