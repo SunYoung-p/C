@@ -1,26 +1,17 @@
 #include <stdio.h>
 
-enum
-{
-    R,
-    G,
-    B
-};
-typedef enum dosol
-{
-    Do = 1,
-    Re = 2,
-    Mi = 3
-} Dosol;
-
 int main()
 {
-    Dosol n;
+    FILE *fp = fopen("data3.txt", "r");
+    char m[20] = {0};
 
-    for (n = Do; n <= Mi; n++)
-        printf("%d\n", n);
+    while (fgets(m, sizeof(m) - 1, fp) != NULL)
+        printf("%s", m);
 
-    printf("R : %d \n", R);
-    printf("G : %d \n", G);
-    printf("B : %d \n", B);
+    if (feof(fp) != 0)
+        puts("파일 끝까지 잘 읽었습니다 \n");
+    else
+        puts("문제가 생긴 것 같습니다. \n");
+
+    return 0;
 }
